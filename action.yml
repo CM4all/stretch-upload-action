@@ -1,0 +1,24 @@
+name: 'Upload to CM4all Hosting'
+description: 'Upload a website build to CM4all Stretch Hosting'
+author: 'Max Kellermann'
+
+inputs:
+  path:
+    description: 'A directory which shall be uploaded'
+    required: true
+
+  api_key:
+    description: 'The Stretch API key'
+    required: true
+
+  customer_id:
+    description: 'The Stretch customer id'
+    required: true
+
+  hosting_id:
+    description: 'The Stretch hosting id'
+    required: true
+
+runs:
+  using: 'node16'
+  main: 'index.js'
