@@ -21,8 +21,6 @@ try {
             }
         },
         (res) => {
-            console.log(res.statusCode);
-
             if (res.statusCode !== 201) {
                 core.setFailed(`PUT failed: ${res.statusCode}`);
                 res.resume();
@@ -32,16 +30,12 @@ try {
     );
 
     request.on('continue', () => {
-        console.log('continue');
-
         const child = spawn('/bin/tar', ['cC', path, '.']);
         child.stdout.on('data', (data) => {
-            console.log("data");
             request.write(data);
         });
 
         child.on('close', (code) => {
-            console.log("close code="+code);
             if (code !== 0) {
                 core.setFailed(`tar failed: ${code}`);
                 request.destroy();
