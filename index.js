@@ -1,8 +1,8 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
-const spawn = require('child_process').spawn;
-const fs = require('fs');
+
 const https = require('node:https');
+const spawn = require('child_process').spawn;
 
 try {
     const path = core.getInput('path');

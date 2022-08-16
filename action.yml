@@ -2,7 +2,7 @@ name: 'Upload to CM4all Hosting'
 description: 'Upload a website build to CM4all Stretch Hosting'
 author: 'Max Kellermann'
 
-inputs: 
+inputs:
   path:
     description: 'A directory which shall be uploaded'
     required: true
