@@ -7,16 +7,8 @@ inputs:
     description: 'A directory which shall be uploaded'
     required: true
 
-  api_key:
-    description: 'The Stretch API key'
-    required: true
-
-  customer_id:
-    description: 'The Stretch customer id'
-    required: true
-
-  hosting_id:
-    description: 'The Stretch hosting id'
+  ticket:
+    description: 'The Stretch untar ticket'
     required: true
 
 runs:
